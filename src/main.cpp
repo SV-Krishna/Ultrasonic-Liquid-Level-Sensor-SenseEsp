@@ -145,16 +145,9 @@ The sensor status is also sent to the Signal K server to monitor the sensor's he
       // https://signalk.org/SensESP/pages/tutorials/tank_level/#example-3-a-sensor-that-outputs-something-other-than-0-when-the-tank-is-empty  
           
           const char* tank_config_path = "/tanks_fuel_currentLevel/tankHeight";
-
-/**
- * @brief The full_value variable represents the maximum value of the fuel level in the tank.
- * It is calculated based on the tank height and the maximum fuel level.
- */
-const float full_value = (250, "/tanks_fuel_currentLevel/tankHeight");
-                    
-          
+                 
           const float empty_value = 0; // in mm 
-  //        const float full_value = 1000; // in mm  
+          const float full_value = 1000; // in mm  
           const float range = full_value - empty_value; // 200 - 0 = 200
           const float divisor = range / 100.0; //200 / 100 = 2
           const float multiplier = 1.0 / divisor; //  (1 / 2 = 0.5)
